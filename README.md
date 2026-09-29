@@ -83,5 +83,5 @@ When a user attempts to retrieve, update, or delete a note by ID, the API perfor
    JWT_SECRET=your_jwt_secret_key
    ```
 
-**Note:** Replace <username>, <password> and <database_name> with your actual MongoDB Atlas connection details.
+**Note:** Replace *username*, *password* and *database_name* with your actual MongoDB Atlas connection details.
 
