@@ -1,6 +1,6 @@
 
 const router = require('express').Router();
-const { getNotes, createNote, updateNote, deleteNote} = require("../../controllers/noteController")
+const { getNotes, createNote, updateNote, deleteNote, getNoteById} = require("../../controllers/noteController")
 const { authMiddleware } = require('../../utils/auth');
 
 // Apply authMiddleware to all routes in this file
@@ -18,5 +18,8 @@ router.put('/:id', updateNote);
 
 // DELETE /api/notes/:id - Delete a note
 router.delete('/:id', deleteNote);
+
+// Get Single Note
+router.delete('/:id', getNoteById);
 
 module.exports = router;

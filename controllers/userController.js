@@ -1,5 +1,5 @@
 
-const { User } = require('../models/User.js');
+const User = require('../models/User.js');
 const { signToken } = require('../utils/auth.js');
 
 // POST /api/users/register - Create a new user
@@ -9,7 +9,8 @@ async function registerUser(req, res) {
         const token = signToken(user);
         res.status(201).json({ token, user });
     } catch (err) {
-        res.status(400).json(err);
+        console.log('Error during registration:', err);
+  res.status(400).json({ message: err.message || 'Registration failed' });
     }
 }
 
