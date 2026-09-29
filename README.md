@@ -25,15 +25,21 @@ A RESTful API built with Node.js, Express, and MongoDB that implements user auth
 ### User Routes (`/api/users`)
 
 | `POST` | `/api/users/register` | Register a new user account
+
 | `POST` | `/api/users/login` | Authenticate user & return JWT token
 
 ### Note Routes (`/api/notes`)
 
 | `GET` | `/api/notes` | Get all notes created by the logged-in user
+
 | `POST` | `/api/notes` | Create a new note attached to the logged-in user
+
 | `GET` | `/api/notes/:id` | Get a specific note by ID *(Owner only)*
+
 | `PUT` | `/api/notes/:id` | Update a specific note by ID *(Owner only)*
+
 | `DELETE` | `/api/notes/:id` | Delete a specific note by ID *(Owner only)*
+
 
 
 ## Security & Authorization Logic
@@ -77,9 +83,5 @@ When a user attempts to retrieve, update, or delete a note by ID, the API perfor
    JWT_SECRET=your_jwt_secret_key
    ```
 
-**Note:** Replace <username>, <password>, and <database_name> with your actual MongoDB Atlas connection details.
+**Note:** Replace <username>, <password> and <database_name> with your actual MongoDB Atlas connection details.
 
-4. **Start the server:**
-   ```bash
-   npm start
-   ```
